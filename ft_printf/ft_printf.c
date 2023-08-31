@@ -10,9 +10,9 @@ void	ft_putstr(char *str, int *len)
 		*len += write(1, str++, 1);
 }
 
-void	ft_putnbr(int nb, int base, int *len)
+void	ft_putnbr(long nb, int base, int *len)
 {
-	char *hex = "0123456789abdcef";
+	char *hex = "0123456789abcdef";
 
 	if (nb < 0)
 	{
@@ -26,8 +26,6 @@ void	ft_putnbr(int nb, int base, int *len)
 	}
 	else
 		*len += write(1, &hex[nb], 1);
-
-
 }
 
 int	ft_printf(const char *format, ...)
@@ -56,9 +54,9 @@ int	ft_printf(const char *format, ...)
 	return(len);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	ft_printf("%s\n", "toto");
 	ft_printf("Magic %s is %d\n", "number", 42);
 	ft_printf("Hexadecimal for %d is %x\n", 42, 42);
-}
+} */
