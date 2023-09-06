@@ -1,6 +1,5 @@
 
-#include<unistd.h>
-#include<stdlib.h>
+#include"get_next_line.h"
 
 char	*get_next_line(int fd)
 {
