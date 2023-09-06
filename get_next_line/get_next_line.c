@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 			break ;
 	}
 	buffer[i] = '\0';
-	if (rd == -1 || i == 0 || (!buffer[i - 1] && !rd))
+	if ((rd == -1 || !rd) || i == 0)
 	{
 		free(buffer);
 		return (NULL);
